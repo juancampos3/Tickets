@@ -13,5 +13,13 @@
                die();
            } 
         }
+
+        public function set_names(){
+            return $this->dbh->query("SET NAMES 'UTF8'");
+        }
+
+        public function ruta(){
+            return "http://localhost/TICKETS"
+        }
     }
 ?>
