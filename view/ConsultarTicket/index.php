@@ -1,5 +1,5 @@
 <?php 
-	require_once("../../config/conexion.php");
+	require_once("../../config/conexion");
 	if (isset($_SESSION["usu_id"])){
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 		</div><!--.container-fluid-->
 	</div><!--.page-content-->
 	<?php require_once("../MainJs/js.php"); ?>
-	<script src="home.js"></script>
+	<script src="consultarticket.js"></script>
 </body>
 </html>
 <?php 
