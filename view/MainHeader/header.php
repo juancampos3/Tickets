@@ -2,8 +2,8 @@
     <div class="container-fluid">
 
         <a href="#" class="site-logo">
-            <img class="hidden-md-down" src="../../public/img/logo-2.png" alt="">
-            <img class="hidden-lg-up" src="../../public/img/logo-2-mob.png" alt="">
+            <img class="hidden-md-down" src="../.././public/img/logo-2.png" alt="">
+            <img class="hidden-lg-up" src="../.././public/img/logo-2-mob.png" alt="">
         </a>
 
         <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
@@ -32,7 +32,8 @@
 
                 <div class="mobile-menu-right-overlay"></div>
 
-                <input type="hidden" id="user_idx" value="<?php echo $_SESSION["usu_id"] ?>"><!-- ID del Usuario-->
+                <input type="hidden" id="user_id" value="<?php echo $_SESSION["usu_id"] ?>"><!-- ID del Usuario-->
+                <input type="hidden" id="rol_id" value="<?php echo $_SESSION["rol_id"] ?>"><!-- Rol del Usuario-->
 
                 <div class="dropdown dropdown-typical">
                     <a href="#" class="dropdown-toggle no-arr">
