@@ -37,11 +37,12 @@
 				<table id="ticket_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
 					<thead>
 						<tr>
-							<th style="width:3%;">No. Ticket</th>
-							<th style="width:5%;">Categoria</th>
+							<th style="width:1%;">No. Ticket</th>
+							<th style="width:3%;">Categoria</th>
 							<th class="text-center" style="width:8%;">Titulo</th>
-                            <th class="text-center" style="width:10%;">Fecha Creación</th>
-							<th class="text-center" style="width:5%;"></th>
+                            <th class="text-center" style="width:1%;">Estado</th>
+                            <th class="text-center" style="width:3%;">Fecha Creación</th>
+							<th class="text-center" style="width:1%;"></th>
 							
 						</tr>
 					</thead>
