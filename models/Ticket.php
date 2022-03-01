@@ -22,6 +22,7 @@
                 tm_ticket.cat_id,
                 tm_ticket.tick_titulo,
                 tm_ticket.tick_descrip,
+                tm_ticket.tick_estado,
                 tm_ticket.fech_crea,
                 tm_usuario.usu_nom,
                 tm_usuario.usu_ape,
