@@ -83,8 +83,8 @@
 							</fieldset>
 						</div>
 						<div class="col-lg-12">
-							<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-success">Enviar</button>
-                            <button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-danger">Cerrar Ticket</button>
+							<button type="button" id="btnenviar" class="btn btn-rounded btn-inline btn-success">Enviar</button>
+                            <button type="button" id="btncerrarticket" class="btn btn-rounded btn-inline btn-danger">Cerrar Ticket</button>
 						</div>
 				</div>
 
