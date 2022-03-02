@@ -41,6 +41,12 @@
                             <span class="lbl">Consultar Ticket</span>
                         </a>
                     </li>
+                    <li class="blue-dirty">
+                        <a href="..\MntUsuario\">
+                            <span class="glyphicon glyphicon-th"></span>
+                            <span class="lbl">Usuarios</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         <?php
