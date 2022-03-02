@@ -121,7 +121,7 @@
             <?php
         break;
 
-        case "mostrar";
+        case "mostrar":
             $datos=$ticket->listar_ticket_x_id($_POST["tick_id"]);  
             if(is_array($datos)==true and count($datos)>0){
                 foreach($datos as $row)
