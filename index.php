@@ -37,7 +37,7 @@
                 <input type="hidden" id="rol_id" name="rol_id" value="1">
 
                     <div class="sign-avatar">
-                        <img src="public/img/avatar-sign.png" alt="" id="imgtipo">
+                        <img src="public/img/users.png" alt="" id="imgtipo">
                     </div>
                     <center>
                         <h1>Soporte en Casa S.A.S</h1>

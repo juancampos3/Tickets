@@ -23,6 +23,11 @@ $(document).ready(function(){
 function guardaryeditar(e){
     e.preventDefault();
     var formData = new FormData($("#ticket_form")[0]);
+
+    if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()==''){
+        swal("¡Advertencia!", "Algunos Campos del Formulario están Vacios", "warning");
+    }else{
+    
     $.ajax({
         url: "../../controller/ticket.php?op=insert",
             type: "POST",
@@ -33,8 +38,9 @@ function guardaryeditar(e){
             $('#tick_titulo').val('');
             $('#tick_descrip').summernote('reset');
             swal("¡Listo!","Su Solicitud ha sido Creada con Exito","success")
-        }
-    });
+            }
+        });
+    }
 }
 init();
 

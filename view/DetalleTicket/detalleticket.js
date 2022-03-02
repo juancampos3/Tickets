@@ -69,8 +69,8 @@ $(document).on("click","#btnenviar", function(){
 
 $(document).on("click","#btncerrarticket", function(){
     swal({
-        title: "HelpDesk",
-        text: "Esta seguro de Cerrar el Ticket?",
+        title: "¡Advertencia!",
+        text: "¿Está seguro/a de Cerrar el Ticket?",
         type: "warning",
         showCancelButton: true,
         confirmButtonClass: "btn-warning",
@@ -89,8 +89,8 @@ $(document).on("click","#btncerrarticket", function(){
             listardetalle(tick_id);
 
             swal({
-                title: "HelpDesk!",
-                text: "Ticket Cerrado correctamente.",
+                title: "¡Felicidades!",
+                text: "El Ticket ha sido Cerrado Exitosamente",
                 type: "success",
                 confirmButtonClass: "btn-success"
             });

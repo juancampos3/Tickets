@@ -71,7 +71,7 @@
             </section>
 
 
-            <div class="box-typical box-typical-padding">
+            <div class="box-typical box-typical-padding" id="pnldetalle">
 				
                 <h6>Agregar Respuesta:</h6>
 				<div class="row">
