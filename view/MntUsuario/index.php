@@ -36,6 +36,7 @@
 			<table id="usuario_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
 					<thead>
 						<tr>
+							
 							<th style="width: 15%;">Nombre</th>
 							<th style="width: 15%;">Apellido</th>
 							<th class="d-none d-sm-table-cell" style="width: 40%;">Correo</th>
@@ -54,7 +55,7 @@
 		</div>
 	</div>
 	<!-- Contenido -->
-
+	<?php require_once("modalmantenimiento.php");?>
 	<?php require_once("../MainJs/js.php");?>
 	
 	<script type="text/javascript" src="mntusuario.js"></script>

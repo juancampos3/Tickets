@@ -34,11 +34,12 @@
             }
         }
 
-    public function insert_usuario($usu_nom, $usu_ape, $usu_correo, $usu_pass, $rol_id){
+        public function insert_usuario($usu_nom,$usu_ape,$usu_correo,$usu_pass,$rol_id){
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="INSERT INTO tm_usuario (usu_id, usu_nom, usu_ape, usu_correo, usu_pass, rol_id, fech_crea, fech_modi, fech_elim, est) VALUES (NULL,?,?,?,?,?,NOW(),NULL,NULL,'1');";
+        $sql="INSERT INTO tm_usuario (usu_id, usu_nom, usu_ape, usu_correo, usu_pass, rol_id, fech_crea, fech_mod, fech_elim, est) VALUES (NULL,?,?,?,?,?,NOW(),NULL,NULL,'1')";
         $sql=$conectar->prepare($sql);
+        var_dump('insert');
         $sql->bindValue(1, $usu_nom);
         $sql->bindValue(2, $usu_ape);
         $sql->bindValue(3, $usu_correo);
@@ -51,14 +52,22 @@
     public function update_usuario($usu_id, $usu_nom, $usu_ape, $usu_correo, $usu_pass, $rol_id){
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="UPDATE tm_usuario SET usu_nom=?, usu_ape=?, usu_correo=?, usu_pass=?, rol_id=? WHERE usu_id=?";
-        $sql=$conectar->prepare($sql);
-        $sql->bindValue(1, $usu_id);
-        $sql->bindValue(2, $usu_nom);
-        $sql->bindValue(3, $usu_ape);
-        $sql->bindValue(4, $usu_correo);
-        $sql->bindValue(5, $usu_pass);
-        $sql->bindValue(6, $rol_id);
+        $sql="UPDATE tm_usuario SET
+        usu_nom=? , 
+        usu_ape=?, 
+        usu_correo=?, 
+        usu_pass=?, 
+        rol_id=? 
+        WHERE 
+        usu_id=?";
+        var_dump('update');
+        $sql=$conectar->prepare($sql); 
+        $sql->bindValue(1, $usu_nom);
+        $sql->bindValue(2, $usu_ape);
+        $sql->bindValue(3, $usu_correo);
+        $sql->bindValue(4, $usu_pass);
+        $sql->bindValue(5, $rol_id);
+        $sql->bindValue(6, $usu_id);
         $sql->execute();
         return $resultado=$sql->fetchAll();
     }
@@ -66,7 +75,7 @@
     public function delete_usuario($usu_id){
         $conectar= parent::conexion();
         parent::set_names();
-        $sql= "UPDATE tm_usuario SET est='0', fecha_elim=NOW() WHERE usu_id=?";
+        $sql= "UPDATE tm_usuario SET est='0', fech_elim=NOW() WHERE usu_id=?";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $usu_id);
         $sql->execute();
