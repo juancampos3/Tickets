@@ -103,7 +103,7 @@ function editar(usu_id){
 
 function eliminar(usu_id){
     swal({
-        title: "HelpDesk",
+        title: "¡Advertencia!",
         text: "¿Está Seguro/a de Eliminar el Registro?",
         type: "error",
         showCancelButton: true,
