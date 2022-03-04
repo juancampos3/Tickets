@@ -4,20 +4,20 @@
     $ticket = new Ticket();
 
     switch($_GET["op"]){
-        case "insert":
+        case "insert";
             $ticket->insert_ticket($_POST["usu_id"],$_POST["cat_id"],$_POST["tick_titulo"],$_POST["tick_descrip"]);
         break;
 
-        case "update":
+        case "update";
             $ticket->update_ticket($_POST["tick_id"]);
             $ticket->insert_detalleticket_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
 
-        case "insertdetalle":
+        case "insertdetalle";
             $ticket->insert_detalleticket($_POST["tick_id"],$_POST["usu_id"],$_POST["tickd_descrip"]);
         break;
 
-        case "listar_x_usu":
+        case "listar_x_usu";
             $datos=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
             $data= Array();
             foreach($datos as $row){
@@ -45,7 +45,7 @@
             echo json_encode($results);
         break;
 
-        case "listar":
+        case "listar";
             $datos=$ticket->listar_ticket();
             $data = array();
             foreach ($datos as $row) {
@@ -73,7 +73,7 @@
                 echo json_encode($results);
         break;
 
-        case "listardetalle":
+        case "listardetalle";
             $datos=$ticket->listar_ticketdetalle_x_ticket($_POST["tick_id"]);
             ?>
                 <?php
@@ -121,7 +121,7 @@
             <?php
         break;
 
-        case "mostrar":
+        case "mostrar";
             $datos=$ticket->listar_ticket_x_id($_POST["tick_id"]);  
             if(is_array($datos)==true and count($datos)>0){
                 foreach($datos as $row)
@@ -181,6 +181,11 @@
                 }
                 echo json_encode($output);
             }
+        break;
+
+        case "grafico";
+            $datos=$ticket->get_ticket_grafico();  
+            echo json_encode($datos);
         break;
     }
 ?>

@@ -92,5 +92,10 @@
                 echo json_encode($output);
             }
         break;
+        
+        case "grafico";
+            $datos=$usuario->get_usuario_grafico($_POST["usu_id"]);  
+            echo json_encode($datos);
+        break;
     }
 ?>
