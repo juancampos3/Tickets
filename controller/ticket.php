@@ -16,11 +16,15 @@
             $ticket->insert_detalleticket_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
 
+        case "asignar":
+            $ticket->update_ticket_asignacion($_POST["tick_id"],$_POST["usu_asig"]);
+        break;
+
         case "insertdetalle";
             $ticket->insert_detalleticket($_POST["tick_id"],$_POST["usu_id"],$_POST["tickd_descrip"]);
         break;
 
-        case "listar_x_usu";
+        case "listar_x_usu":
             $datos=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
             $data= Array();
             foreach($datos as $row){
@@ -28,30 +32,30 @@
                 $sub_array[] = $row["tick_id"];
                 $sub_array[] = $row["cat_nom"];
                 $sub_array[] = $row["tick_titulo"];
-               
-                if ( array_key_exists('tick_estado', $row) && $row["tick_estado"]=="Abierto"){
+
+                if ($row["tick_estado"]=="Abierto"){
                     $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
-                }else {
+                }else{
                     $sub_array[] = '<span class="label label-pill label-danger">Cerrado</span>';
                 }
-                
+
                 $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
 
-                if ($row["fech_asig"]==NULL) {
-                    $sub_array[] = '<span class="label label-pill label-default">No Asignado</span>';
-                }else {
+                if($row["fech_asig"]==null){
+                    $sub_array[] = '<span class="label label-pill label-default">Por Definir</span>';
+                }else{
                     $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
                 }
 
-                if ($row["usu_asig"]==NULL) {
-                    $sub_array[] = '<span class="label label-pill label-warning">Por Definir</span>';
-                }else {
-                    $datos1=$usuario->get_usuario_x_id($_POST["usu_asig"]);
-                    foreach ($datos1 as $row1){
+                if($row["usu_asig"]==null){
+                    $sub_array[] = '<span class="label label-pill label-warning">Sin Asignar</span>';
+                }else{
+                    $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
+                    foreach($datos1 as $row1){
                         $sub_array[] = '<span class="label label-pill label-success">'. $row1["usu_nom"].'</span>';
                     }
                 }
-                
+
                 $sub_array[] = '<button type="button" onClick="ver('.$row["tick_id"].');"  id="'.$row["tick_id"].'" class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
                 $data[] = $sub_array;
             }
