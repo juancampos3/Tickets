@@ -54,18 +54,18 @@ CREATE TABLE tm_ticket (
 
 -- INSERCION DATOS TABLA TICKET --
 INSERT INTO tm_ticket (tick_id, usu_id, cat_id, tick_titulo, tick_descrip, tick_estado, fech_crea, usu_asig, fech_asig, est) VALUES
-(1, 1, 1, 'TEST 1', 'TICKET 1', 'Abierto', NULL, 1, NULL, 1),
-(2, 1, 1, 'TEST 2', 'TICKET 2', 'Abierto', NULL, 2, NULL, 1),
-(3, 1, 1, 'TEST 3', 'TICKET 3', 'Abierto', NULL, 3, NULL, 1),
-(4, 1, 1, 'TEST 4', 'TICKET 4', 'Abierto', NULL, 1, NULL, 1),
-(5, 1, 1, 'TEST 5', 'TICKET 5', 'Abierto', NULL, 2, NULL, 1),
-(6, 1, 1, 'TEST 6', 'TICKET 6', 'Abierto', NULL, 3, NULL, 1),
-(7, 1, 1, 'TEST 7', 'TICKET 7', 'Abierto', NULL, 1, NULL, 1),
-(8, 1, 1, 'TEST 8', 'TICKET 8', 'Abierto', NULL, 2, NULL, 1),
-(9, 1, 1, 'TEST 9', 'TICKET 9', 'Abierto', NULL, 3, NULL, 1),
-(10, 1, 1, 'TEST 10', 'TICKET 10', 'Abierto', NULL, 1, NULL, 1),
-(11, 1, 1, 'TEST 11', 'TICKET 11', 'Abierto', NULL, 2, NULL, 1),
-(12, 1, 1, 'TEST 12', 'TICKET 12', 'Abierto', NULL, 3, NULL, 1);
+(1, 1, 1, 'TEST 1', 'TICKET 1', 'Abierto', NULL, NULL, NULL, 1),
+(2, 1, 1, 'TEST 2', 'TICKET 2', 'Abierto', NULL, NULL, NULL, 1),
+(3, 1, 1, 'TEST 3', 'TICKET 3', 'Abierto', NULL, NULL, NULL, 1),
+(4, 1, 1, 'TEST 4', 'TICKET 4', 'Abierto', NULL, NULL, NULL, 1),
+(5, 1, 1, 'TEST 5', 'TICKET 5', 'Abierto', NULL, NULL, NULL, 1),
+(6, 1, 1, 'TEST 6', 'TICKET 6', 'Abierto', NULL, NULL, NULL, 1),
+(7, 1, 1, 'TEST 7', 'TICKET 7', 'Abierto', NULL, NULL, NULL, 1),
+(8, 1, 1, 'TEST 8', 'TICKET 8', 'Abierto', NULL, NULL, NULL, 1),
+(9, 1, 1, 'TEST 9', 'TICKET 9', 'Abierto', NULL, NULL, NULL, 1),
+(10, 1, 1, 'TEST 10', 'TICKET 10', 'Abierto', NULL, NULL, NULL, 1),
+(11, 1, 1, 'TEST 11', 'TICKET 11', 'Abierto', NULL, NULL, NULL, 1),
+(12, 1, 1, 'TEST 12', 'TICKET 12', 'Abierto', NULL, NULL, NULL, 1);
 
 -- TABLA USUARIO --
 CREATE TABLE tm_usuario (
