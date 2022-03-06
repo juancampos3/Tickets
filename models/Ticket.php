@@ -119,7 +119,7 @@
             return $resultado=$sql->fetchAll();
         }
 
-        public function insert_ticketdetalle($tick_id,$usu_id,$tickd_descrip){
+        public function insert_detalleticket($tick_id,$usu_id,$tickd_descrip){
             $conectar= parent::conexion();
             parent::set_names();
                 $sql="INSERT INTO td_ticketdetalle (tickd_id,tick_id,usu_id,tickd_descrip,fech_crea,est) VALUES (NULL,?,?,?,now(),'1');";

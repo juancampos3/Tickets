@@ -62,7 +62,7 @@ $(document).on("click","#btnenviar", function(){
         $.post("../../controller/ticket.php?op=insertdetalle", { tick_id:tick_id,usu_id:usu_id,tickd_descrip:tickd_descrip}, function (data) {
             listardetalle(tick_id);
             $('#tickd_descrip').summernote('reset');
-            swal("Correcto!", "Registrado Correctamente", "success");
+            swal("¡Correcto!", "Registrado Correctamente", "success");
         }); 
     }
 });
