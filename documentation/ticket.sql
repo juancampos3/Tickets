@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS tickets;
 USE tickets;
 
 -- TABLA DETALLE TICKET --
-CREATE TABLE td_detalleticket (
+CREATE TABLE td_ticketdetalle (
   tickd_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   tick_id int(11) NOT NULL,
   usu_id int(11) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE td_detalleticket (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- INSERCION DATOS TABLA DETALLE TICKET --
-INSERT INTO td_detalleticket (tickd_id, tick_id, usu_id, tickd_descrip, fech_crea, est) VALUES
+INSERT INTO td_ticketdetalle (tickd_id, tick_id, usu_id, tickd_descrip, fech_crea, est) VALUES
 (1, 1, 2, 'Respuesta', '2022-02-26 13:00:00', 1),
 (2, 1, 1, 'Respuesta 2', '2022-02-26 13:30:00', 1),
 (3, 1, 2, 'Respuesta 3', '2022-02-26 14:00:00', 1),
@@ -87,10 +87,18 @@ INSERT INTO tm_usuario (usu_id, usu_nom, usu_ape, usu_correo, usu_pass, rol_id, 
 (2, 'JUAN MANUEL', 'PARRA NAVARRETE', 'ADMIN2@PRUEBA.COM', '1234', 2, NULL, NULL, NULL, 1),
 (3, 'JORGE ELIECER', 'ROLDAN BRAVO', 'ADMIN3@PRUEBA.COM', '1234', 1, NULL, NULL, NULL, 1);
 
+-- TABLA DOCUMENTOS --
+CREATE TABLE td_documento(
+	doc_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    tick_id INT NOT NULL,
+    doc_nom VARCHAR(500) NOT NULL,
+    fech_crea DATETIME NULL,
+    est INT NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DELIMITER $$
 
-CREATE PROCEDURE sp_i_ticketdetalle_01 (xtick_id INT, xusu_id INT)  BEGIN INSERT INTO td_detalleticket (tickd_id, tick_id, usu_id, tickd_descrip, fech_crea, est)
+CREATE PROCEDURE sp_i_ticketdetalle_01 (xtick_id INT, xusu_id INT)  BEGIN INSERT INTO td_ticketdetalle (tickd_id, tick_id, usu_id, tickd_descrip, fech_crea, est)
 VALUES (NULL,xtick_id,xusu_id,'Ticket Cerrado', NOW(),'1');END$$
 
 CREATE PROCEDURE sp_l_usuario_01 ()  BEGIN SELECT * FROM tm_usuario WHERE est='1'; END$$
