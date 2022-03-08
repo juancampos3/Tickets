@@ -44,14 +44,22 @@ function guardaryeditar(e){
     if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()==''){
         swal("¡Advertencia!", "Algunos Campos del Formulario están Vacios", "warning");
     }else{
-    
+        var totalFiles = $('#fileElem').val().length;
+        for(var i=0; i<totalFiles; i++){
+            formData.append('files[]', $('#fileElem')[0].files[i]);
+        }
+
     $.ajax({
+        
         url: "../../controller/ticket.php?op=insert",
             type: "POST",
             data: formData,
             contentType: false,
             processData: false,
             success: function(data){
+                console.log(data);
+                data = JSON.parse(data);
+                console.log(data[0].tick_id);
             $('#tick_titulo').val('');
             $('#tick_descrip').summernote('reset');
             swal("¡Listo!","Su Solicitud ha sido Creada con Exito","success")

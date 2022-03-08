@@ -11,7 +11,12 @@
             $sql->bindValue(3, $tick_titulo);
             $sql->bindValue(4, $tick_descrip);
             $sql->execute();
-            return $resultado=$sql->fetchAll();
+
+            $sql1="SELECT LAST_INSERT_ID() AS 'tick_id';";
+            $sql1=$conectar->prepare($sql1);
+            $sql1->execute();
+
+            return $resultado=$sql1->fetchAll(pdo::FETCH_ASSOC);
         }
 
         public function listar_ticket_x_usu($usu_id){
