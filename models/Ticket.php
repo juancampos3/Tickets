@@ -61,6 +61,7 @@
                 tm_ticket.fech_crea,
                 tm_usuario.usu_nom,
                 tm_usuario.usu_ape,
+                tm_usuario.usu_correo,
                 tm_categoria.cat_nom
                 FROM 
                 tm_ticket
@@ -89,6 +90,7 @@
                 tm_ticket.usu_asig,
                 tm_ticket.fech_asig,
                 tm_usuario.usu_nom,
+                tm_usuario.usu_correo,
                 tm_usuario.usu_ape,
                 tm_categoria.cat_nom
                 FROM 
