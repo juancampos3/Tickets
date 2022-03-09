@@ -6,8 +6,8 @@ require_once("../config/conexion.php");
 require_once("../Models/Ticket.php");
 
 class Email extends PHPMailer{
-    protected $gCorreo = 'jujocamen@gmail.com';
-    protected $gContrasena = 'juanjose1913';
+    protected $gCorreo = '';
+    protected $gContrasena = '';
 
     public function ticket_abierto($tick_id){
         $ticket = new Ticket();
@@ -19,7 +19,6 @@ class Email extends PHPMailer{
             $categoria = $row["cat_nom"];
             $correo = $row["usu_correo"];
         }
-        //IGual//
         $this->IsSMTP();
         $this->Host = 'smtp.gmail.com';//Aqui el server
         $this->Port = 587;//Aqui el puerto
