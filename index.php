@@ -104,7 +104,7 @@
     <script src="public/js/plugins.js"></script>
     <script type="text/javascript" src="public/js/lib/match-height/jquery.matchHeight.min.js"></script>
     <script src="public/js/app.js"></script>
-    <script src="index.js"></script>
+    <script src="datos.js"></script>
     
     <script>
     $(function() {

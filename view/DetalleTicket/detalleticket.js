@@ -146,6 +146,10 @@ $(document).on("click","#btncerrarticket", function(){
 
             }); 
 
+            $.post("../../controller/email.php?op=ticket_cerrado", {tick_id : tick_id}, function (data) {
+                console.log(data);
+            }); 
+
             listardetalle(tick_id);
 
             swal({

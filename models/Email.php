@@ -6,8 +6,8 @@ require_once("../config/conexion.php");
 require_once("../Models/Ticket.php");
 
 class Email extends PHPMailer{
-    protected $gCorreo = '';
-    protected $gContrasena = '';
+    protected $gCorreo = 'jujocamen@gmail.com';
+    protected $gContrasena = 'juanjose1913';
 
     public function ticket_abierto($tick_id){
         $ticket = new Ticket();
@@ -16,6 +16,7 @@ class Email extends PHPMailer{
             $id = $row["tick_id"];
             $usu = $row["usu_nom"];
             $titulo = $row["tick_titulo"];
+            $descrip = $row["tick_descrip"];
             $categoria = $row["cat_nom"];
             $correo = $row["usu_correo"];
         }
@@ -38,12 +39,12 @@ class Email extends PHPMailer{
         $cuerpo = str_replace("lblNomUsu", $usu, $cuerpo);
         $cuerpo = str_replace("lblTitu", $titulo, $cuerpo);
         $cuerpo = str_replace("lblCate", $categoria, $cuerpo);
+        $cuerpo = str_replace("lblDescrip", $descrip, $cuerpo);
         $this->Body = $cuerpo;
         $this->AltBody = strip_tags("Ticket Abierto");
         return $this->Send();
     }
 
-    /*
     public function ticket_cerrado($tick_id){
         $ticket = new Ticket();
         $datos = $ticket->listar_ticket_x_id($tick_id);
@@ -56,7 +57,7 @@ class Email extends PHPMailer{
         }
 
         $this->IsSMTP();
-        $this->Host = 'smtp.office365.com';
+        $this->Host = 'smtp.gmail.com';
         $this->Port = 587;
         $this->SMTPAuth = true;
         $this->Username = $this->gCorreo;
@@ -80,8 +81,7 @@ class Email extends PHPMailer{
         $this->AltBody = strip_tags("Ticket Cerrado");
         return $this->Send();
     }
-    */
-    /*
+    
     public function ticket_asignado($tick_id){
         $ticket = new Ticket();
         $datos = $ticket->listar_ticket_x_id($tick_id);
@@ -94,7 +94,7 @@ class Email extends PHPMailer{
         }
         
         $this->IsSMTP();
-        $this->Host = 'smtp.office365.com';
+        $this->Host = 'smtp.gmail.com';
         $this->Port = 587;
         $this->SMTPAuth = true;
         $this->Username = $this->gCorreo;
@@ -117,7 +117,6 @@ class Email extends PHPMailer{
         $this->AltBody = strip_tags("Ticket Asignado");
         return $this->Send();
     }
-    */
 
 }
 
