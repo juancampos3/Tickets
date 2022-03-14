@@ -83,9 +83,10 @@ CREATE TABLE tm_usuario (
 
 -- INSERCION DATOS TABLA USUARIO --
 INSERT INTO tm_usuario (usu_id, usu_nom, usu_ape, usu_correo, usu_pass, rol_id, fech_crea, fech_mod, fech_elim, est) VALUES
-(1, 'JUAN JOSE', 'CAMPOS MENDOZA', 'ADMIN1@PRUEBA.COM', '1234', 1, NULL, NULL, NULL, 1),
-(2, 'JUAN MANUEL', 'PARRA NAVARRETE', 'ADMIN2@PRUEBA.COM', '1234', 2, NULL, NULL, NULL, 1),
-(3, 'JORGE ELIECER', 'ROLDAN BRAVO', 'ADMIN3@PRUEBA.COM', '1234', 1, NULL, NULL, NULL, 1);
+(1, 'JUAN', 'CAMPOS', 'jujocamen@gmail.com', '56a33df92d65617683e23eecbbd90169', 1, NULL, NULL, NULL, 1),
+(2, 'DESARROLLO', 'SOPORTE', 'desarrollo@soporteencasa.com', '29c2b9eb8cf2bdc98be0c38202e63582', 2, NULL, NULL, NULL, 1),
+(3, 'JORGE', 'ROLDAN', 'jerby94@gmail.com', 'ccf3d8c196514f5c572b740163576b58', 2, NULL, NULL, NULL, 1),
+(4, 'JUAN', 'PARRA', 'juanparra2517@gmail.com', '6812a633f869947aaaa0804a1dcd4dd1', 1, NULL, NULL, NULL, 1);
 
 -- TABLA DOCUMENTOS --
 CREATE TABLE td_documento(

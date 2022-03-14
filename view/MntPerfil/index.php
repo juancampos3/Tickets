@@ -22,7 +22,7 @@
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
-							<h3>Pefil</h3>
+							<h3>Perfil</h3>
 							<ol class="breadcrumb breadcrumb-simple">
 								<li><a href="#">Home</a></li>
 								<li class="active">Perfil</li>
@@ -35,8 +35,10 @@
 			<div class="box-typical box-typical-padding">
 
 				<div class="row">
+				
 						<div class="col-lg-6">
 							<fieldset class="form-group">
+								
 								<label class="form-label semibold" for="exampleInput">Nueva Contraseña</label>
 								<input type="password" class="form-control" id="txtpass" name="txtpass">
 							</fieldset>
