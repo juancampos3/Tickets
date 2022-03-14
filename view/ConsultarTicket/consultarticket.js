@@ -161,4 +161,33 @@ function guardar(e){
     });
 }
 
+function CambiarEstado(tick_id){
+    swal({
+        title: "¡Atención!",
+        text: "¿Está Seguro/a de Re-Abrir el Ticket?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-warning",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+            $.post("../../controller/ticket.php?op=reabrir", {tick_id : tick_id,usu_id : usu_id}, function (data) {
+
+            });
+
+            $('#ticket_data').DataTable().ajax.reload();	
+
+            swal({
+                title: "¡Bien Hecho!",
+                text: "El Ticket fue Re - Abierto Correctamente",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
 init();
