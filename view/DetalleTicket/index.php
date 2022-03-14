@@ -40,6 +40,14 @@
 
             <div class="box-typical box-typical-padding">
                 <div class="row">
+
+                    <div class="col-lg-12">
+                        <fieldset class="form-group">
+                            <label class="form-label semibold" for="tick_titulo">Titulo</label>
+                            <input type="text" class="form-control" name="tick_titulo" id="tick_titulo" readonly>
+                        </fieldset>
+                    </div>
+
                     <div class="col-lg-6">
                         <fieldset class="form-group">
                             <label class="form-label semibold" for="cat_nom">Categoria</label>
@@ -49,10 +57,12 @@
 
                     <div class="col-lg-6">
                         <fieldset class="form-group">
-                            <label class="form-label semibold" for="tick_titulo">Titulo</label>
-                            <input type="text" class="form-control" name="tick_titulo" id="tick_titulo" readonly>
+                            <label class="form-label semibold" for="cats_nom">Sub Categoria</label>
+                            <input type="text" class="form-control" name="cats_nom" id="cats_nom" readonly>
                         </fieldset>
                     </div>
+
+                    
 
                     <div class="col-lg-12">
                         <fieldset class="form-group">
