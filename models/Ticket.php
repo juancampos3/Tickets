@@ -61,6 +61,8 @@
                 tm_ticket.tick_descrip,
                 tm_ticket.tick_estado,
                 tm_ticket.fech_crea,
+                tm_ticket.tick_estre,
+                tm_ticket.tick_coment,
                 tm_usuario.usu_nom,
                 tm_usuario.usu_ape,
                 tm_usuario.usu_correo,
@@ -156,7 +158,7 @@
         public function insert_ticketdetalle_reabrir($tick_id,$usu_id){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="	INSERT INTO td_ticketdetalle 
+            $sql="INSERT INTO td_ticketdetalle 
             (tickd_id,tick_id,usu_id,tickd_descrip,fech_crea,est) 
             VALUES 
             (NULL,?,?,'Ticket Re-Abierto',now(),'1');";
@@ -167,14 +169,13 @@
             return $resultado=$sql->fetchAll();
         }
 
-
         public function update_ticket($tick_id){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="update tm_ticket 
-                set	
+            $sql="UPDATE tm_ticket 
+                SET	
                     tick_estado = 'Cerrado'
-                where
+                WHERE
                     tick_id = ?";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $tick_id);
@@ -254,6 +255,23 @@
             $sql->execute();
             return $resultado=$sql->fetchAll();
         } 
+
+        public function insert_encuesta($tick_id, $tick_estre, $tick_coment){
+            $conectar= parent::conexion();
+            parent::set_names();
+            $sql="UPDATE tm_ticket 
+                SET	
+                    tick_estre = ?,
+                    tick_coment = ?
+                WHERE
+                    tick_id = ?";
+            $sql=$conectar->prepare($sql);
+            $sql->bindValue(1, $tick_estre);
+            $sql->bindValue(2, $tick_coment);
+            $sql->bindValue(3, $tick_id);
+            $sql->execute();
+            return $resultado=$sql->fetchAll();
+        }
 
     }
 ?>
