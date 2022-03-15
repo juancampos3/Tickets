@@ -85,7 +85,7 @@
                     </div>
                     <div class="form-group">
                         <div class="float-right reset">
-                            <a href="reset-password.html">Cambiar Contraseña</a>
+                            <a href="https://api.whatsapp.com/send?phone=573107838367&text=%C2%A1Hola!,%20Quiero%20mis%20credenciales%20para%20acceder%20y%20realizar%20mis%20solicitudes%20de%20servicios%20a%20Soporte%20en%20Casa%20S.A.S">Solicita tus Credenciales</a>
                         </div>
                         <div class="float-left reset">
                             <a href="#" id="btnsoporte">Acceso Soporte</a>
