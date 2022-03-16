@@ -62,7 +62,12 @@
                         </fieldset>
                     </div>
 
-                    
+                    <div class="col-lg-4">
+                        <fieldset class="form-group">
+                            <label class="form-label semibold" for="cat_nom">Prioridad</label>
+                            <input type="text" class="form-control" id="prio_nom" name="prio_nom" readonly>
+                        </fieldset>
+                    </div>
 
                     <div class="col-lg-12">
                         <fieldset class="form-group">

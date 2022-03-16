@@ -32,8 +32,12 @@ $(document).ready(function(){
         ]
     });
 
-    $.post("../../controller/categoria.php?op=combo",function(data, status){
+    $.post("../../controller/categoria.php?op=combo",function(data){
         $('#cat_id').html(data);
+    });
+
+    $.post("../../controller/prioridad.php?op=combo",function(data){
+        $('#prio_id').html(data);
     });
     
     $("#cat_id").change(function(){
@@ -50,7 +54,7 @@ function guardaryeditar(e){
     e.preventDefault();
     var formData = new FormData($("#ticket_form")[0]);
 
-    if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()=='' || $('#cats_id').val()==''){
+    if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()=='' || $('#cats_id').val()=='' || $('#prio_id').val()==''){
         swal("¡Advertencia!", "Algunos Campos del Formulario están Vacios", "warning");
     }else{
         var totalFiles = $('#fileElem').val().length;

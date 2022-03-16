@@ -48,7 +48,7 @@
 								<input type="text" class="form-control" id="tick_titulo" name="tick_titulo" placeholder="Ingrese Titulo">
 							</fieldset>
 						</div>	
-						<div class="col-lg-6">
+						<div class="col-lg-4">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="cat_id">Categoria</label>
 								<select id="cat_id" name="cat_id" class="form-control" data-placeholder="SELECCIONAR">
@@ -56,10 +56,18 @@
 								</select>
 							</fieldset>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-4">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="cat_id">Sub Categoria</label>
 								<select id="cats_id" name="cats_id" class="form-control" data-placeholder="SELECCIONAR">
+
+								</select>
+							</fieldset>
+						</div>
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label semibold" for="cat_id">Prioridad</label>
+								<select id="prio_id" name="prio_id" class="form-control" data-placeholder="SELECCIONAR">
 
 								</select>
 							</fieldset>
