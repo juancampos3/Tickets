@@ -57,14 +57,20 @@
         <section class="row">
             <section class="col-md-12">
                 <section class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <label for="tipoAtencion">Categoria</label>
                         <input type="text" class="form-control" name="cat_nom" id="cat_nom" readonly>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="fechaActual">Sub Categoria</label>
                             <input type="text" class="form-control" name="cats_nom" id="cats_nom" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="fechaActual">Prioridad</label>
+                            <input type="text" class="form-control" name="prio_nom" id="prio_nom" readonly>
                         </div>
                     </div>
                 </section>
@@ -83,7 +89,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="fechaActual">Fecha Cierre</label>
-                            <input type="text" class="form-control" name="lblfechcrea" id="lblfechcrea" readonly>
+                            <input type="text" class="form-control" name="lblfechcierre" id="lblfechcierre" readonly>
                         </div>
                     </div>
                 </section>

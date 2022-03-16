@@ -33,6 +33,8 @@ function listardetalle(tick_id){
         $('#cats_nom').val(data.cats_nom);
         $('#tick_titulo').val(data.tick_titulo);
         $('#tickd_descripusu').val(data.tick_descrip);
+        $('#prio_nom').val(data.prio_nom);
+        $('#lblfechcierre').val(data.fech_cierre);
 
         if (data.tick_estado_texto=='Abierto') {
             window.open('http://localhost/tickets','_self');
