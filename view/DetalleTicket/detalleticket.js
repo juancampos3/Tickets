@@ -155,6 +155,10 @@ $(document).on("click","#btncerrarticket", function(){
                 console.log(data);
             }); 
 
+            $.post("../../controller/email.php?op=ticket_cerrado_copia", {tick_id : tick_id}, function (data) {
+                console.log(data);
+            }); 
+
             listardetalle(tick_id);
 
             swal({

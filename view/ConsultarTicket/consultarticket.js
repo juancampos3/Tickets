@@ -152,6 +152,10 @@ function guardar(e){
             $.post("../../controller/email.php?op=ticket_asignado", {tick_id : tick_id}, function (data) {
                 console.log(data);
             }); 
+            $.post("../../controller/email.php?op=ticket_asignado_copia", {tick_id : tick_id}, function (data) {
+                console.log(data);
+            }); 
+
 
             
             $("#modalasignar").modal('hide');

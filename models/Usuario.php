@@ -23,6 +23,7 @@
                         $_SESSION["usu_id"]=$resultado["usu_id"];
                         $_SESSION["usu_nom"]=$resultado["usu_nom"];
                         $_SESSION["usu_ape"]=$resultado["usu_ape"];
+                        $_SESSION["usu_correo"]=$resultado["usu_correo"];
                         $_SESSION["rol_id"]=$resultado["rol_id"];
                         header("Location:".Conectar::ruta()."/view/Home/home.php");
                         exit(); 
