@@ -33,7 +33,7 @@
 	                        <article class="statistic-box yellow">
 	                            <div>
 	                                <div class="number" id="lbltotalabierto"></div>
-	                                <div class="caption"><div>Total Tickets Abiertos</div></div>
+	                                <div class="caption"><div>Total de Tickets Abiertos</div></div>
 	                            </div>
 	                        </article>
 	                    </div>
@@ -41,7 +41,7 @@
 	                        <article class="statistic-box red">
 	                            <div>
 	                                <div class="number" id="lbltotalcerrado"></div>
-	                                <div class="caption"><div>Total Tickets Cerrados</div></div>
+	                                <div class="caption"><div>Total de Tickets Cerrados</div></div>
 	                            </div>
 	                        </article>
 	                    </div>
@@ -51,7 +51,7 @@
 
 			<section class="card">
 				<header class="card-header">
-					Grafico Estadístico
+					Estadisticas
 				</header>
 				<div class="card-block">
 					<div id="divgrafico" style="height: 250px;"></div>
