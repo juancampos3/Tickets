@@ -138,6 +138,6 @@
 </html>
 <?php 
 	}else {
-		header("Location:".conectar::ruta()."/index.php");
+		header("Location:".conectar::ruta()."/ticket.php");
 	}
 ?>

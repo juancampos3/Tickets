@@ -233,6 +233,7 @@ class Email extends PHPMailer{
         $cuerpo = str_replace("lblNomUsu", $usu, $cuerpo);
         $cuerpo = str_replace("lblTitu", $titulo, $cuerpo);
         $cuerpo = str_replace("lblCate", $categoria, $cuerpo);
+        $cuerpo = str_replace("lblDescrip", $descrip, $cuerpo);
 
         $this->Body = $cuerpo;
         $this->AltBody = strip_tags("Ticket Asignado");
