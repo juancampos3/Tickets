@@ -12,19 +12,6 @@ CREATE TABLE td_ticketdetalle (
   est int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- INSERCION DATOS TABLA DETALLE TICKET --
-INSERT INTO td_ticketdetalle (tickd_id, tick_id, usu_id, tickd_descrip, fech_crea, est) VALUES
-(1, 1, 2, 'Respuesta', '2022-02-26 13:00:00', 1),
-(2, 1, 1, 'Respuesta 2', '2022-02-26 13:30:00', 1),
-(3, 1, 2, 'Respuesta 3', '2022-02-26 14:00:00', 1),
-(4, 1, 1, 'Respuesta 4', '2022-02-26 14:30:00', 1),
-(5, 1, 2, 'Respuesta 5', '2022-02-26 15:00:00', 1),
-(6, 2, 2, 'Respuesta', '2022-02-26 13:00:00', 1),
-(7, 2, 1, 'Respuesta 2', '2022-02-26 13:30:00', 1),
-(8, 2, 2, 'Respuesta 3', '2022-02-26 14:00:00', 1),
-(9, 2, 1, 'Respuesta 4', '2022-02-26 14:30:00', 1),
-(10, 2, 2, 'Respuesta 5', '2022-02-26 15:00:00', 1);
-
 -- TABLA CATEGORIA --
 CREATE TABLE tm_categoria (
   cat_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -50,14 +37,12 @@ CREATE TABLE tm_ticket (
   fech_crea datetime DEFAULT NULL,
   usu_asig int(11) DEFAULT NULL,
   fech_asig datetime DEFAULT NULL,
-  est int(11) NOT NULL
+  tick_estre INT NULL,
+  tick_coment VARCHAR (300) NULL,
+  est int(11) NOT NULL,
+  fech_cierre DATETIME,
+  prio_id INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- INSERCION DATOS TABLA TICKET --
-INSERT INTO tm_ticket (tick_id, usu_id, cat_id, cats_id, tick_titulo, tick_descrip, tick_estado, fech_crea, usu_asig, fech_asig, est) VALUES
-(1, 1, 1, 1, 'TEST 1', 'TICKET 1', 'Abierto', NULL, NULL, NULL, 1),
-(2, 1, 1, 2, 'TEST 2', 'TICKET 2', 'Abierto', NULL, NULL, NULL, 1),
-(3, 1, 1, 3, 'TEST 3', 'TICKET 3', 'Abierto', NULL, NULL, NULL, 1);
 
 -- TABLA USUARIO --
 CREATE TABLE tm_usuario (
@@ -100,6 +85,17 @@ INSERT INTO tm_subcategoria (cats_id, cat_id, cats_nom, est) VALUES
 (1, 1,'MONITOR', 1),
 (2, 2,'WINRAR', 1),
 (3, 3,'CAPRICHITOS', 1);
+
+CREATE TABLE tm_prioridad(
+	prio_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    prio_nom VARCHAR(50) NOT NULL,
+    est INT NOT NULL
+);
+
+INSERT INTO tm_prioridad (prio_id, prio_nom, est) VALUES
+(1, 'ALTA', 1),
+(2, 'MEDIA', 1),
+(3, 'BAJA', 1);
 
 DELIMITER $$
 
