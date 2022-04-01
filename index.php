@@ -91,7 +91,7 @@
 
           <div class="col-lg-6 content order-lg-1 order-2">
             <p>
-              Soporte en Casa S.A.S. nació de la idea de brindar a las empresas y personas; soluciones informáticas relacionadas con el mantenimiento de equipos de cómputo, montaje de cableado estructurado, instalación de software y hardware, soporte técnico y desarrollo de software (Aplicaciones Móviles, Web y de Escritorio) a la medida y a un precio accesible.
+            Soporte en Casa S.A.S. nació de la idea de brindar a las empresas y personas; soluciones informáticas relacionadas con el mantenimiento de equipos de cómputo, montaje de cableado estructurado, instalación de software y hardware, venta de equipos, partes y repuestos, soporte técnico y desarrollo de software (Aplicaciones Móviles, Web y de Escritorio) a la medida y a un precio accesible.
             </p>
             <h2>¿Porqué contratar los Servicios de Soporte en Casa S.A.S.?</h2>
 
@@ -110,7 +110,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon"><i class="bi bi-eye"></i> </div>
               <h4 class="title"><a href="">Seguimiento y Soporte Técnico</a></h4>
-              <p class="description">¡Nos preocupamos por ti! por eso, si adquieres nuestros servicios,contarás con nuestro acompañamiento y su respectivo soporte en caso de requerirlo.</p>
+              <p class="description">¡Nos preocupamos por ti! por eso, si adquieres nuestros servicios, contarás con nuestro acompañamiento y un excelente soporte post venta en caso de que lo requiera.</p>
             </div>
 
           </div>
@@ -200,7 +200,7 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="public/img/clients/stratops.jpeg" class="img-fluid" alt="">
+              <img src="public/img/clients/stratops.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -224,13 +224,13 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="public/img/clients/client-6.png" class="img-fluid" alt="">
+              <img src="public/img/clients/gestricont.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="public/img/clients/client-7.png" class="img-fluid" alt="">
+              <img src="public/img/clients/juridico.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -285,7 +285,7 @@
                     <img src="public/img/juanjo.jpg" class="testimonial-img" alt="">
                     <h3>Juan Jose Campos Mendoza</h3>
                     <h4>Desarrollador Front-End</h4>
-                    <p>Ingeniero de software con conocimientos básicos en lenguajes de programación como HTML5, CSS3, JavaScript, PHP, Java, bases de datos relacionales MySQL, Frameworks como Angular, Laravel, manejo de máquinas virtuales en la herramienta virtualbox y herramientas para trabajar remotamente como anydesk y teamviewer y conocimientos en sistemas operativos como Windows y Linux</p>
+                    <p>Ingeniero de software con conocimientos en lenguajes de programación como HTML5, CSS3, JavaScript, PHP, Java, bases de datos relacionales MySQL, Frameworks como Angular, Laravel, manejo de máquinas virtuales en la herramienta virtualbox y herramientas para trabajar remotamente como anydesk y teamviewer y conocimientos en sistemas operativos como Windows y Linux</p>
                   </div>
                 </div><!-- End testimonial item -->
 
@@ -307,7 +307,7 @@
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="section-header">
-          <h3>Visitanos</h3>
+          <h3>Encuentranos</h3>
         </div>
 
         <div class="row">
@@ -332,7 +332,7 @@
 
         <div class="col-lg-6 col-md-6 footer-info">
           <h3>Soporte en Casa S.A.S.</h3>
-          <p>Soporte en Casa S.A.S. nació de la idea de brindar a las empresas y personas soluciones informáticas relacionadas con el mantenimiento de equipos de cómputo, montaje de cableado estructurado, instalación de software y hardware, soporte técnico y desarrollo de software (Aplicaciones móviles, Web y de escritorio) a la medida a un precio accesible.</p>
+          <p>Soporte en Casa S.A.S. nació de la idea de brindar a las empresas y personas; soluciones informáticas relacionadas con el mantenimiento de equipos de cómputo, montaje de cableado estructurado, instalación de software y hardware, venta de equipos, partes y repuestos, soporte técnico y desarrollo de software (Aplicaciones Móviles, Web y de Escritorio) a la medida y a un precio accesible.</p>
         </div>
 
         <div class="col-lg-3 col-md-9 footer-links">
